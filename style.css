@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin&subset=latin-ext');
+/* GENERAL */
+.container {
+    width: 500px;
+    margin: 200px auto 0;
+}
+
+.row {
+    padding: 0 15px;
+}
+
+/* INSIDE MEM */
+#mem {
+    background: url('http://lorempixel.com/500/300') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+}
+
+.div-top-text,
+.div-bottom-text {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    max-width: 470px;
+    margin: auto;
+    font-family: 'Pangolin', cursive;
+    text-transform: uppercase;
+}
+
+.div-top-text {
+    top: 15px;
+}
+
+.div-bottom-text {
+    bottom: 15px;
+}
+
+.text-top,
+.text-bottom {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.text-top {
+    top: 30px;
+}
+
+.text-bottom {
+    bottom: 30px;
+}
+
+/* AFTER MEM */
+label {
+    min-width: 100px;
+}
+
+#change-img-link,
+#change-top-text,
+#change-bottom-text {
+    height: 40px;
+    margin: 20px auto;
+    padding: 0 15px;
+    min-width: calc(100% - 120px);
+}
+
+#change-img-link::placeholder {
+    color: red;
+}
+
+.btn {
+    display: inline-block;
+    margin: auto;
+}
+
+.btn-image {
+    margin-left: 110px;
+}
