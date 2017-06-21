@@ -33,10 +33,18 @@ document.addEventListener('DOMContentLoaded', function () {
     inputs.topText.addEventListener('keyup', addTextTop);
     inputs.bottomText.addEventListener('keyup', addTextBottom);
     button.changeImg.addEventListener('click', function () {
-        var getInputText = inputs.imageText.value;
-        
-        mem.container.style.backgroundImage = "url(" + getInputText + ")"; 
-        inputs.imageText.value = '';
+		
+		var re = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+		if (re.test(inputs.imageText.value)) {
+            
+			mem.container.style.backgroundImage = "url(" + inputs.imageText.value + ")"; 
+			inputs.imageText.value = '';
+            inputs.imageText.placeholder = '';
+		}
+		else {
+            inputs.imageText.value = '';
+			inputs.imageText.placeholder = 'Incorrect link';
+		}
     });
     button.clearText.addEventListener('click', function () {
         var getTopText = inputs.topText.value = '',
