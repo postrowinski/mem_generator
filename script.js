@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var re = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
 		if (re.test(inputs.imageText.value)) {
             
-			mem.container.style.backgroundImage = "url(" + inputs.imageText.value + ")"; 
+			mem.container.style.backgroundImage = "url('" + inputs.imageText.value + "')"; 
 			inputs.imageText.value = '';
             inputs.imageText.placeholder = '';
 		}

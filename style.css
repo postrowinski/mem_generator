@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Pangolin&subset=latin-ext');
 /* GENERAL */
 .container {
-    width: 500px;
-    margin: 200px auto 0;
+    max-width: 500px;
+    background: #e6e6e6;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .row {
@@ -55,7 +69,7 @@
 
 /* AFTER MEM */
 label {
-    min-width: 100px;
+    min-width: 90px;
 }
 
 #change-img-link,
@@ -64,7 +78,14 @@ label {
     height: 40px;
     margin: 20px auto;
     padding: 0 15px;
-    min-width: calc(100% - 120px);
+    min-width: calc(100% - 110px);
+    border-color: rgba(0, 0, 0, 0.40);
+}
+
+#change-img-link:focus,
+#change-top-text:focus,
+#change-bottom-text:focus {
+    border-color: transparent;
 }
 
 #change-img-link::placeholder {
@@ -76,6 +97,8 @@ label {
     margin: auto;
 }
 
-.btn-image {
-    margin-left: 110px;
+@media (max-width: 768px) {
+    .container {
+        margin-top: 15px;
+    }
 }
